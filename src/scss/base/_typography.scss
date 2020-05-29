@@ -1,0 +1,100 @@
+@font-face {
+    src: url(../assets/fonts/Grotzec/GrotzecCondensed-Regular.otf);
+    font-family: "Grotzec-regular";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(../assets/fonts/Grotzec/GrotzecCondensed-light.otf);
+    font-family: "Grotzec-light";
+    font-weight: 100;
+}
+
+@font-face {
+    src: url(../assets/fonts/Nayarit/Nayarit_Condensed.otf);
+    font-family: "Nayarit";
+    font-weight: 400;
+}
+
+body {
+    font-family: "Grotzec-light", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+    font-size: 3.95vw;
+    font-family: "Nayarit", sans-serif;
+    font-weight: 100;
+
+    @include respond(tab-land) {
+      font-size: 10vw;
+    }
+}
+
+h4 {
+    font-family: "Nayarit", sans-serif;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    font-weight: 100;
+
+    @include respond(tab-land) {
+      font-size: 12vw;
+      line-height: 11vw;
+    }
+}
+
+h5 {
+    font-size: 1.09375vw;
+    font-weight: 100;
+    line-height: 1.328125vw;
+
+    @include respond(tab-land) {
+      font-size: 4vw;
+      font-weight: 100;
+      line-height: normal;
+    }
+}
+
+p {
+    font-size: 1.09375vw;
+    line-height: 1.328125vw;
+    padding-top: 0.9375vw;
+
+    @include respond(tab-land) {
+      font-size: 3.5vw;
+      line-height: normal;
+      padding-top: 3vw;
+      // hyphens: auto;
+    }
+}
+
+.bold-uppercase {
+  text-transform: uppercase;
+  font-family: "Grotzec-regular";
+  font-weight: 400;
+}
+
+a {
+    color: var(--black);
+    font-size: 1.09375vw;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 3.5vw;
+    }
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.paragraph {
+    font-size: 1.09375vw;
+}
+
+.credits {
+  text-decoration: none;
+}

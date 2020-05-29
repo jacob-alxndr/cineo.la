@@ -1,0 +1,94 @@
+.home__main {
+    color: var(--black);
+    transform: translateX(-7.5%);
+    display: grid;
+    grid-template-columns: repeat(2, 16.75vw);
+    grid-template-rows: repeat(3, 15vw);
+    justify-self: center;
+    align-self: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 50vw);
+      grid-template-rows: repeat(3, 45vw);
+      transform: translateX(0);
+    }
+
+    .logo-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-item:hover {
+      background-color: var(--color-primary);
+      @include respond(tab-land) {
+          background-color: var(--color-secondary);
+          border: none;
+      }
+      border: 1px solid var(--black);
+
+      .about {
+        display: none;
+      }
+
+      .aboutText {
+        display: block;
+      }
+    }
+
+    .item {
+        @include flex-center;
+        position: relative;
+        &--color-secondary {
+            background-color: var(--color-secondary);
+        }
+        &--transform-left {
+            transform: translateX(-50%);
+        }
+        &--transform-right {
+            transform: translateX(50%);
+        }
+        &--transform-left,
+        &--transform-right {
+           @include respond(tab-land) {
+               transform: translateX(0);
+           }
+         }
+
+         .about {
+           @include respond(tab-land) {
+                 display: none;
+           }
+         }
+
+        .aboutText {
+            padding: 0px 0.9375vw 0.9375vw 0.9375vw;
+
+            @include respond(tab-land) {
+                  padding: 0vw 2.25vw 3.5vw 2.25vw;
+                  // hyphens: auto;
+            }
+
+            overflow-y: scroll;
+            width: 100%;
+            height: 100%;
+            display: none;
+            @include respond(tab-land) {
+                display: block;
+            }
+        }
+
+        .aboutText::-webkit-scrollbar {
+          display: none;
+        }
+
+    }
+
+    .logo {
+      width: 16.5vw;
+
+      @include respond(tab-land) {
+        width: 40vw;
+      }
+    }
+}

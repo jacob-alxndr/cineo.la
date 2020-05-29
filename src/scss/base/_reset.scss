@@ -1,0 +1,44 @@
+:root {
+    --color-primary: #7aab5b;
+    --color-secondary: #e9aee2;
+    --teal: #27c0ca;
+    --blue: #1175b7;
+    --purple: #ac72d6;
+    --pink: #e9aee2;
+    --orange: #f3604b;
+    --brown: #d19563;
+    --light-brown: #b7a37e;
+    --gold: #ddb54f;
+    --yellow: #cfca57;
+    --green: #7aab5b;
+    --white: #fafafa;
+    --grey1: #eeeeee;
+    --grey2: #8b8b8b;
+    --grey3: #b9b9b9;
+    --black: #232323;
+    --black2: #3b3b3b;
+    --black3: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    outline: none;
+}
+
+::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+// a:focus {
+//     background-color: var(--pink);
+//     color: var(--color-primary);
+// }
